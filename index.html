@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método Fan ART</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% auto;
+      background-attachment: fixed;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-image: url('bg-mobile.jpg');
+      }
+    }
+
+    @media (min-width: 769px) {
+      body {
+        background-image: url('bg-desktop.png');
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .botao {
+      background-color: #22c55e;
+      color: white;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      max-width: 90%;
+      width: 300px;
+    }
+
+    .botao:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <a class="botao" href="https://go.hotmart.com/E98951254F" target="_blank" rel="noopener noreferrer">
+      Quero Aprender a Desenhar Agora!
+    </a>
+
+    <button class="botao" onclick="salvarLink()">Salvar Link e Garantir o Acesso</button>
+  </div>
+
+  <script>
+    function salvarLink() {
+      const link = "https://go.hotmart.com/E98951254F";
+      navigator.clipboard.writeText(link);
+      fetch(link, { mode: 'no-cors' });
+      alert("Link salvo com sucesso!");
+    }
+  </script>
+</body>
+</html>
