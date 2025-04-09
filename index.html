@@ -12,6 +12,9 @@
       background-position: center;
       background-size: 100% auto;
       background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
     }
 
     @media (max-width: 768px) {
@@ -27,49 +30,39 @@
     }
 
     .content {
-      padding: 2rem;
+      padding: 3rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
+    }
+
+    .cta {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
     }
 
     .botao {
       background-color: #22c55e;
       color: white;
-      padding: 1rem 2rem;
-      margin: 1rem 0;
+      padding: 0.8rem 1.5rem;
+      margin: 0.8rem 0;
       border: none;
       border-radius: 8px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
-      max-width: 90%;
-      width: 300px;
+      max-width: 80%;
+      width: 250px;
     }
 
     .botao:hover {
       opacity: 0.9;
     }
-  </style>
-</head>
-<body>
-  <div class="content">
-    <a class="botao" href="https://go.hotmart.com/E98951254F" target="_blank" rel="noopener noreferrer">
-      Quero Aprender a Desenhar Agora!
-    </a>
-
-    <button class="botao" onclick="salvarLink()">Salvar Link e Garantir o Acesso</button>
-  </div>
-
-  <script>
-    function salvarLink() {
-      const link = "https://go.hotmart.com/E98951254F";
-      navigator.clipboard.writeText(link);
-      fetch(link, { mode: 'no-cors' });
-      alert("Link salvo com sucesso!");
-    }
-  </script>
-</body>
-</html>
+    
