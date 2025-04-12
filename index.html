@@ -3,67 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Método Fan ART - Aprenda a Desenhar do Zero</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Método Fan ART</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('https://hotsitefanart.s3.sa-east-1.amazonaws.com/fundo-fanart.webp') no-repeat center center fixed;
-      background-size: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
+      box-sizing: border-box;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      min-height: 100vh;
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+    }
+
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('bg-desktop.png');
+      background-size: 100%;
+      background-position: center;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+
+    @media (max-width: 768px) {
+      .bg {
+        background-image: url('bg-mobile.jpg');
+      }
+    }
+
+    .content {
+      position: relative;
+      width: 100%;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
     }
-    h1 {
-      font-size: 1.8em;
+
+    .content h1 {
+      font-size: 2rem;
       margin-bottom: 20px;
     }
-    p {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
+
     .cta-button {
       background-color: #ff6600;
-      color: white;
-      padding: 15px 30px;
-      margin: 15px 0;
+      color: #fff;
+      padding: 15px 25px;
+      margin: 10px;
       border: none;
       border-radius: 10px;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
     }
+
     .cta-button:hover {
       background-color: #e65c00;
     }
+
     .secure {
-      font-size: 0.9em;
+      margin-top: 15px;
+      font-size: 0.9rem;
       color: #ccc;
-      margin-top: 10px;
     }
+
     .cookie-banner {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 15px;
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      padding: 15px 10px;
       text-align: center;
       z-index: 1000;
     }
+
     .cookie-banner button {
-      margin: 0 10px;
+      margin: 5px;
       padding: 10px 20px;
       background-color: #ff6600;
       border: none;
@@ -74,11 +104,12 @@
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Descubra como qualquer pessoa pode aprender a desenhar do zero com esse método exclusivo!</h1>
-    <p>Milhares de alunos já estão desenhando com esse passo a passo simples e eficiente.</p>
-    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Comece a desenhar agora mesmo!</a>
-    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Acesso imediato ao curso</a>
+  <div class="bg"></div>
+
+  <div class="content">
+    <h1>Aprenda a desenhar do zero com o método que está transformando iniciantes em verdadeiros artistas!</h1>
+    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
+    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
     <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
     <p class="secure">Conexão segura <span style="font-size: 1.2em;">🔒</span> Seus dados estão protegidos</p>
   </div>
