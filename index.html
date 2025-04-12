@@ -1,112 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aprenda a Desenhar Animes - Método Fan ART</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Método Fan ART - Aprenda a Desenhar do Zero</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
+      background: url('https://hotsitefanart.s3.sa-east-1.amazonaws.com/fundo-fanart.webp') no-repeat center center fixed;
+      background-size: cover;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       min-height: 100vh;
-      background-image: url('bg-mobile.jpg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-position: center center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
     }
-
-    @media (min-width: 768px) {
-      body {
-        background-image: url('bg-desktop.jpg');
-        background-size: 100%;
-      }
-    }
-
-    .container {
-      text-align: center;
-      max-width: 480px;
-      width: 100%;
-      margin: auto;
-    }
-
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.8em;
       margin-bottom: 20px;
-      text-shadow: 1px 1px 3px #000;
     }
-
-    .btn {
-      display: block;
-      width: 100%;
+    p {
+      font-size: 1.2em;
       margin: 10px 0;
-      padding: 15px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-align: center;
-      background-color: #00c853;
+    }
+    .cta-button {
+      background-color: #ff6600;
       color: white;
+      padding: 15px 30px;
+      margin: 15px 0;
       border: none;
       border-radius: 10px;
-      text-decoration: none;
+      font-size: 1.2em;
       cursor: pointer;
-      box-shadow: 0 0 10px #00c853aa;
-      transition: transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
     }
-
-    .btn:hover {
-      transform: scale(1.02);
+    .cta-button:hover {
+      background-color: #e65c00;
     }
-
-    .cookie {
+    .secure {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+    .cookie-banner {
       position: fixed;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 0.8rem;
-      padding: 10px;
-      border-radius: 10px;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 15px;
       text-align: center;
+      z-index: 1000;
+    }
+    .cookie-banner button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Aprenda a Desenhar Seus Animes Favoritos!</h1>
-
-    <a class="btn" href="https://go.hotmart.com/E98951254F" target="_blank">
-      QUERO DESENHAR AGORA!
-    </a>
-
-    <a class="btn" onclick="salvarLink()">
-      SALVAR LINK PARA MAIS TARDE
-    </a>
+  <div class="overlay">
+    <h1>Descubra como qualquer pessoa pode aprender a desenhar do zero com esse método exclusivo!</h1>
+    <p>Milhares de alunos já estão desenhando com esse passo a passo simples e eficiente.</p>
+    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Comece a desenhar agora mesmo!</a>
+    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Acesso imediato ao curso</a>
+    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
+    <p class="secure">Conexão segura <span style="font-size: 1.2em;">🔒</span> Seus dados estão protegidos</p>
   </div>
 
-  <div class="cookie">
-    Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com o uso.
+  <div class="cookie-banner">
+    <span>Usamos cookies para garantir que você tenha a melhor experiência. Ao continuar, você aceita.</span>
+    <button onclick="this.parentElement.style.display='none'">Aceitar</button>
+    <button onclick="this.parentElement.style.display='none'">Recusar</button>
+    <button onclick="this.parentElement.style.display='none'">Saber mais</button>
   </div>
-
-  <script>
-    function salvarLink() {
-      const link = "https://go.hotmart.com/E98951254F";
-      navigator.clipboard.writeText(link);
-      fetch(link, { mode: 'no-cors' });
-      alert("Link copiado com sucesso! Você pode voltar aqui mais tarde.");
-    }
-  </script>
 </body>
 </html>
