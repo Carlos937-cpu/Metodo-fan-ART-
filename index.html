@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Método Fan ART</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprenda a Desenhar Animes - Método Fan ART</title>
   <style>
     * {
       margin: 0;
@@ -12,113 +11,102 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #000;
-    }
-
-    .bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-image: url('bg-desktop.png');
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      min-height: 100vh;
+      background-image: url('bg-mobile.jpg');
+      background-repeat: no-repeat;
       background-size: 100%;
-      background-position: center;
-      z-index: -1;
-      filter: brightness(0.6);
-    }
-
-    @media (max-width: 768px) {
-      .bg {
-        background-image: url('bg-mobile.jpg');
-      }
-    }
-
-    .content {
-      position: relative;
-      width: 100%;
-      height: 100vh;
+      background-position: center center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      color: #fff;
       padding: 20px;
     }
 
-    .content h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    @media (min-width: 768px) {
+      body {
+        background-image: url('bg-desktop.jpg');
+        background-size: 100%;
+      }
     }
 
-    .cta-button {
-      background-color: #ff6600;
-      color: #fff;
-      padding: 15px 25px;
-      margin: 10px;
+    .container {
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      background-color: #00c853;
+      color: white;
       border: none;
       border-radius: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
       text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #e65c00;
-    }
-
-    .secure {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      color: #fff;
-      padding: 15px 10px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    .cookie-banner button {
-      margin: 5px;
-      padding: 10px 20px;
-      background-color: #ff6600;
-      border: none;
-      border-radius: 5px;
-      color: white;
       cursor: pointer;
+      box-shadow: 0 0 10px #00c853aa;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+    }
+
+    .cookie {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="bg"></div>
+  <div class="container">
+    <h1>Aprenda a Desenhar Seus Animes Favoritos!</h1>
 
-  <div class="content">
-    <h1>Aprenda a desenhar do zero com o método que está transformando iniciantes em verdadeiros artistas!</h1>
-    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
-    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
-    <a class="cta-button" href="https://go.hotmart.com/L98708853F">Quero aprender agora</a>
-    <p class="secure">Conexão segura <span style="font-size: 1.2em;">🔒</span> Seus dados estão protegidos</p>
+    <a class="btn" href="https://go.hotmart.com/E98951254F" target="_blank">
+      "QUERO COMEÇAR AGORA!"
+    </a>
+
+    <a class="btn" onclick="salvarLink()">
+      "SALVAR LINK PROMOCIONAL!"
+    </a>
   </div>
 
-  <div class="cookie-banner">
-    <span>Usamos cookies para garantir que você tenha a melhor experiência. Ao continuar, você aceita.</span>
-    <button onclick="this.parentElement.style.display='none'">Aceitar</button>
-    <button onclick="this.parentElement.style.display='none'">Recusar</button>
-    <button onclick="this.parentElement.style.display='none'">Saber mais</button>
+  <div class="cookie">
+    Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com o uso.
   </div>
+
+  <script>
+    function salvarLink() {
+      const link = "https://go.hotmart.com/E98951254F";
+      navigator.clipboard.writeText(link);
+      fetch(link, { mode: 'no-cors' });
+      alert("Link copiado com sucesso! Você pode voltar aqui mais tarde.");
+    }
+  </script>
 </body>
 </html>
