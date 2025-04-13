@@ -81,6 +81,27 @@
       border-radius: 10px;
       text-align: center;
     }
+
+    /* Estilo para a Headline Chamativa */
+    .headline {
+      background-color: #fef3c7;
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .headline h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #b45309;
+    }
+
+    .headline p {
+      font-size: 1rem;
+      color: #92400e;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -88,35 +109,9 @@
     <h1>Aprenda a Desenhar Seus Animes Favoritos!</h1>
 
     <!-- Headline chamativa -->
-    <div style="background-color: #fef3c7; padding: 20px; text-align: center; border-radius: 12px; margin: 20px 0;">
-      <h2 style="font-size: 1.3rem; font-weight: bold; color: #b45309;">
-        Aprenda a Desenhar do Zero em 7 Dias!
-      </h2>
-      <p style="font-size: 1rem; color: #92400e; margin-top: 10px;">
-        Mesmo que você ache que não tem talento! Método validado por +17 mil alunos. Vagas com desconto disponíveis por tempo limitado!
-      </p>
+    <div class="headline">
+      <h2>Aprenda a Desenhar do Zero em 7 Dias!</h2>
+      <p>Mesmo que você ache que não tem talento! Método validado por +17 mil alunos. Vagas com desconto disponíveis por tempo limitado!</p>
     </div>
 
-    <a class="btn" href="https://go.hotmart.com/E98951254F" target="_blank">
-      "QUERO COMEÇAR AGORA!"
-    </a>
-
-    <a class="btn" onclick="salvarLink()">
-      "SALVAR LINK PROMOCIONAL!"
-    </a>
-  </div>
-
-  <div class="cookie">
-    Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com o uso.
-  </div>
-
-  <script>
-    function salvarLink() {
-      const link = "https://go.hotmart.com/E98951254F";
-      navigator.clipboard.writeText(link);
-      fetch(link, { mode: 'no-cors' });
-      alert("Link copiado com sucesso! Você pode voltar aqui mais tarde.");
-    }
-  </script>
-</body>
-</html>
+    <a class="btn" href="https://go.hotmart
